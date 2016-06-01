@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ob1-dp-QQ7">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--自定义转场动画-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="nkq-d7-psx">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="jug-g1-XkL"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="iYy-Qg-bMY"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nkq-d7-psx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="2Vq-6c-SRs"/>
+                            <constraint firstItem="nkq-d7-psx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="P7g-mh-dhF"/>
+                            <constraint firstItem="nkq-d7-psx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="c6A-bi-6aI"/>
+                            <constraint firstAttribute="trailing" secondItem="nkq-d7-psx" secondAttribute="trailing" id="ebo-yT-SsK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nkq-d7-psx" secondAttribute="bottom" id="lma-zW-D1z"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="c6A-bi-6aI"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="自定义转场动画" id="q7U-Ef-q8A"/>
+                    <connections>
+                        <outlet property="tableView" destination="nkq-d7-psx" id="E4q-xB-K2H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1252" y="418"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oNL-X8-ho4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ob1-dp-QQ7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hqx-fa-KkN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ITh-XP-1gU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aSp-x7-sKp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="440" y="1078"/>
+        </scene>
+    </scenes>
+</document>
